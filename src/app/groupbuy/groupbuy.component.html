@@ -1,0 +1,14 @@
+<ion-item *ngIf="groupbuy">
+  <ion-card>
+    <img src="{{ groupbuy.album }}" />
+    <ion-card-header>
+      <ion-card-subtitle>{{
+        groupbuy.createdAt.seconds * 1000 | date
+      }}</ion-card-subtitle>
+      <ion-card-title>{{ groupbuy.name }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{ groupbuy.description }}
+    </ion-card-content>
+  </ion-card>
+</ion-item>

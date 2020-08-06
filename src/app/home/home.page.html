@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Inbox
+      Custom keebs & parts Group Buys
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -10,16 +10,19 @@
   <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
-  
+
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">
-        Inbox
+        KeebsMania
       </ion-title>
     </ion-toolbar>
   </ion-header>
-  
+
   <ion-list>
-    <app-message *ngFor="let message of getMessages()" [message]="message"></app-message>
+    <app-groupbuy
+      *ngFor="let groupbuy of groupbuys"
+      [groupbuy]="groupbuy"
+    ></app-groupbuy>
   </ion-list>
 </ion-content>
