@@ -1,0 +1,81 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">
+        KeebsMania
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <h3 class="title">Publish your group buy now!</h3>
+  <form #form="ngForm" (ngSubmit)="onSubmit(form)" novalidate>
+    <ion-list lines="full" class="ion-no-margin ion-no-padding form-list">
+      <ion-item>
+        <ion-label position="stacked"
+          >Name <ion-text color="danger">*</ion-text>
+        </ion-label>
+        <ion-input
+          type="text"
+          required
+          clearInput
+          name="name"
+          ngModel
+          placeholder="Insane KBD keyboard"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked"
+          >Description <ion-text color="danger">*</ion-text>
+        </ion-label>
+        <ion-textarea
+          name="description"
+          ngModel
+          rows="3"
+          required
+          clearInput
+          placeholder="Tell us everything about your plan"
+        ></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked"
+          >Picture <ion-text color="danger">*</ion-text>
+        </ion-label>
+        <ion-input
+          type="text"
+          required
+          name="album"
+          ngModel
+          clearInput
+          placeholder="http://link.com"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label
+          >Release date <ion-text color="danger">*</ion-text>
+        </ion-label>
+        <ion-datetime
+          required
+          name="releaseDate"
+          ngModel
+          placeholder="Select Release Date"
+        ></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked"
+          >Price <ion-text color="danger">*</ion-text>
+        </ion-label>
+        <ion-input
+          type="number"
+          required
+          name="price"
+          ngModel
+          clearInput
+          min="0"
+        ></ion-input>
+      </ion-item>
+    </ion-list>
+    <div class="item-center">
+      <ion-button size="medium" type="submit">Create</ion-button>
+    </div>
+  </form>
+</ion-content>

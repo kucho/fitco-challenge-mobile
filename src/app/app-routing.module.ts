@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
 import { PreloadAllModules, RouterModule, Routes } from "@angular/router";
+import { GroupbuyFormComponent } from "./groupbuy-form/groupbuy-form.component";
 
 const routes: Routes = [
   {
@@ -8,10 +9,10 @@ const routes: Routes = [
       import("./home/home.module").then((m) => m.HomePageModule),
   },
   {
-    path: "message/:id",
+    path: "groupbuy",
     loadChildren: () =>
-      import("./view-message/view-message.module").then(
-        (m) => m.ViewMessagePageModule
+      import("./groupbuy-form/groupbuy-form.module").then(
+        (m) => m.GroupbuyFormComponentModule
       ),
   },
   {

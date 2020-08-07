@@ -7,16 +7,11 @@ import { DataService } from "../services/data.service";
   styleUrls: ["home.page.scss"],
 })
 export class HomePage {
+  today = new Date();
   groupbuys = [];
 
   constructor(private data: DataService) {
     this.getGroupbuys();
-  }
-
-  refresh(ev) {
-    setTimeout(() => {
-      ev.detail.complete();
-    }, 3000);
   }
 
   getGroupbuys() {
